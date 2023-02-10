@@ -1,0 +1,11 @@
+export { default as Gallery } from './Gallery';
+export { default as Summary } from './Summary';
+export { default as Info } from './Info';
+export { default as GroupTab } from './GroupTab';
+export { default as AvaliableService } from './AvaliableService';
+export { default as ServiceList } from './ServiceList';
+export { default as Collection } from './Collection';
+export { default as StyleList } from './StyleList';
+export { default as UseBrand } from './UseBrand';
+export { default as Booking } from './Booking';
+export { default as Map } from './Map';

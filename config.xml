@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-packageName="com.isalonbooking"  id="vn.isalon" ios-CFBundleIdentifier="vn.isalon.booking" android-versionCode="62" ios-CFBundleVersion="29" version="2.1.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>iSalon Booking</name>
+    <description>iSalon Booking</description>
+    <author email="info@isalon.vn" href="https://isalon.vn">
+        Công ty TNHH Đầu tư Công nghệ Salon
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="fb-messenger://*"/>
+    <preference name="DisallowOverscroll" value="true" />
+    <universal-links>
+        <host name="isalon.vn" scheme="https" />
+        <host name="dev.isalon.vn" scheme="https" />
+        <host name="go.isalon.vn" scheme="https" />
+    </universal-links>
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:roundIcon="@mipmap/ic_launcher_round"/>
+        </edit-config>
+        <resource-file src="app/assets/mobile/android/google-services.json" target="app/google-services.json" />
+        <preference name="android-minSdkVersion" value="19" />
+        <preference name="android-targetSdkVersion" value="28" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="AndroidLaunchMode" value="singleTask" />
+
+        <icon density="hdpi" src="app/assets/mobile/android/appIcon/mipmap-hdpi/ic_launcher.png" />
+        <icon density="ldpi" src="app/assets/mobile/android/appIcon/mipmap-ldpi/ic_launcher.png" />
+        <icon density="mdpi" src="app/assets/mobile/android/appIcon/mipmap-mdpi/ic_launcher.png" />
+        <icon density="xhdpi" src="app/assets/mobile/android/appIcon/mipmap-xhdpi/ic_launcher.png" />
+        <icon density="xxhdpi" src="app/assets/mobile/android/appIcon/mipmap-xxhdpi/ic_launcher.png" />
+        <icon density="xxxhdpi" src="app/assets/mobile/android/appIcon/mipmap-xxxhdpi/ic_launcher.png" />
+
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-hdpi/ic_launcher_round.png" target="app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-ldpi/ic_launcher_round.png" target="app/src/main/res/mipmap-ldpi/ic_launcher_round.png" />
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-mdpi/ic_launcher_round.png" target="app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-xhdpi/ic_launcher_round.png" target="app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-xxhdpi/ic_launcher_round.png" target="app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
+        <resource-file src="app/assets/mobile/android/appIcon/mipmap-xxxhdpi/ic_launcher_round.png" target="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+
+        <splash density="port-ldpi" src="app/assets/mobile/android/splash/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="app/assets/mobile/android/splash/splash-port-mdpi.png" />
+        <splash density="port-hdpi" src="app/assets/mobile/android/splash/splash-port-hdpi.png" />
+        <splash density="port-xhdpi" src="app/assets/mobile/android/splash/splash-port-xhdpi.png" />
+        <splash density="port-xxhdpi" src="app/assets/mobile/android/splash/splash-port-xxhdpi.png" />
+        <splash density="port-xxxhdpi" src="app/assets/mobile/android/splash/splash-port-xxxhdpi.png" />
+        <splash density="land-ldpi" src="app/assets/mobile/android/splash/splash-land-ldpi.png" />
+        <splash density="land-mdpi" src="app/assets/mobile/android/splash/splash-land-mdpi.png" />
+        <splash density="land-hdpi" src="app/assets/mobile/android/splash/splash-land-hdpi.png" />
+        <splash density="land-xhdpi" src="app/assets/mobile/android/splash/splash-land-xhdpi.png" />
+        <splash density="land-xxhdpi" src="app/assets/mobile/android/splash/splash-land-xxhdpi.png" />
+        <splash density="land-xxxhdpi" src="app/assets/mobile/android/splash/splash-land-xxxhdpi.png" />
+        <hook src="hooks/config-gradle-properties.js" type="before_build" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="target-device" value="handset" />
+        <resource-file src="app/assets/mobile/ios/GoogleService-Info.plist" target="../GoogleService-Info.plist" />
+        <config-file parent="ITSAppUsesNonExemptEncryption" target="*-Info.plist">
+            <false />
+        </config-file>
+        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+            <string>Chúng tôi cần sử dụng camera của bạn để cập nhật ảnh đại diện và đánh giá dịch vụ.</string>
+        </config-file>
+        <config-file parent="NSLocationAlwaysAndWhenInUseUsageDescription" target="*-Info.plist">
+            <string>Chúng tôi cần biết vị trí của bạn để gợi ý những salon gần nhất cũng như tính toán khoảng cách từ vị trí của bạn đến những salon đang tìm kiếm</string>
+        </config-file>
+        <config-file parent="NSLocationAlwaysUsageDescription" target="*-Info.plist">
+            <string>Chúng tôi cần biết vị trí của bạn để gợi ý những salon gần nhất cũng như tính toán khoảng cách từ vị trí của bạn đến những salon đang tìm kiếm</string>
+        </config-file>
+        <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+            <string>Chúng tôi cần biết vị trí của bạn để gợi ý những salon gần nhất cũng như tính toán khoảng cách từ vị trí của bạn đến những salon đang tìm kiếm</string>
+        </config-file>
+        <config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
+            <string>Chúng tôi cần truy xuất thư viện ảnh của bạn để cập nhật ảnh đại diện và bộ sưu tập.</string>
+        </config-file>
+        <config-file parent="CFBundleURLTypes" target="*-Info.plist">
+            <array>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>com.googleusercontent.apps.222575187275-lnnj3p78f3hphlanads0ni3fvo40oe4o</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+        <config-file parent="FirebaseDynamicLinksCustomDomains" target="*-Info.plist">
+            <array>
+                <string>https://go.isalon.vn/</string>
+            </array>
+        </config-file>
+        <icon height="20" src="app/assets/mobile/ios/appIcon/Icon-App-20x20@1x.png" width="20" />
+        <icon height="40" src="app/assets/mobile/ios/appIcon/Icon-App-20x20@2x.png" width="40" />
+        <icon height="60" src="app/assets/mobile/ios/appIcon/Icon-App-20x20@3x.png" width="60" />
+        <icon height="29" src="app/assets/mobile/ios/appIcon/Icon-App-29x29@1x.png" width="29" />
+        <icon height="58" src="app/assets/mobile/ios/appIcon/Icon-App-29x29@2x.png" width="58" />
+        <icon height="87" src="app/assets/mobile/ios/appIcon/Icon-App-29x29@3x.png" width="87" />
+        <icon height="40" src="app/assets/mobile/ios/appIcon/Icon-App-40x40@1x.png" width="40" />
+        <icon height="80" src="app/assets/mobile/ios/appIcon/Icon-App-40x40@2x.png" width="80" />
+        <icon height="120" src="app/assets/mobile/ios/appIcon/Icon-App-40x40@3x.png" width="120" />
+        <icon height="60" src="app/assets/mobile/ios/appIcon/Icon-App-60x60@1x.png" width="60" />
+        <icon height="120" src="app/assets/mobile/ios/appIcon/Icon-App-60x60@2x.png" width="120" />
+        <icon height="180" src="app/assets/mobile/ios/appIcon/Icon-App-60x60@3x.png" width="180" />
+        <icon height="76" src="app/assets/mobile/ios/appIcon/Icon-App-76x76@1x.png" width="76" />
+        <icon height="152" src="app/assets/mobile/ios/appIcon/Icon-App-76x76@2x.png" width="152" />
+        <icon height="167" src="app/assets/mobile/ios/appIcon/Icon-App-83.5x83.5@2x.png" width="167" />
+        <icon height="1024" src="app/assets/mobile/ios/appIcon/ItunesArtwork@2x.png" width="1024" />
+        <splash src="app/assets/mobile/ios/splash/Default@2x~universal~anyany.png" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
+    <plugin name="cordova-plugin-code-push" spec="^1.12.3" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+    <plugin name="cordova-plugin-zip" spec="^3.1.0" />
+    <plugin name="onesignal-cordova-plugin" spec="~2.9.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.3" />
+    <plugin name="cordova-plugin-firebase-authentication" spec="~3.3.0">
+        <variable name="FIREBASE_AUTH_VERSION" value="19.3.+" />
+    </plugin>
+    <plugin name="cordova-plugin-facebook4" spec="~6.4.0">
+        <variable name="APP_ID" value="1017282308444421" />
+        <variable name="APP_NAME" value="iSalon Booking" />
+        <variable name="FACEBOOK_HYBRID_APP_EVENTS" value="false" />
+        <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="5.13.0" />
+    </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.2" />
+    <plugin name="cordova-plugin-wkwebview-engine" spec="^1.2.1" />
+    <plugin name="cordova-plugin-screen-orientation" spec="^3.0.2" />
+    <plugin name="cordova-plugin-file" spec="~6.0.2" />
+    <plugin name="cordova-universal-links-plugin" spec="https://github.com/chancezeus/cordova-universal-links-plugin.git"/>
+    <plugin name="cordova-plugin-calendar" spec="^5.1.5">
+        <variable name="CALENDAR_USAGE_DESCRIPTION" value="Chúng tôi cần truy xuất lịch của bạn để đồng bộ nhắc lịch làm đẹp." />
+        <variable name="CONTACTS_USAGE_DESCRIPTION" value="Chúng tôi cần sử dụng danh bạ của bạn để mời bạn bè tải ứng dụng." />
+    </plugin>
+     <plugin name="cordova-plugin-firebase-dynamiclinks">
+        <variable name="APP_DOMAIN_NAME" value="go.isalon.vn" />
+        <variable name="FIREBASE_DYNAMIC_LINKS_VERSION" value="19.1.+" />
+    </plugin>
+</widget>

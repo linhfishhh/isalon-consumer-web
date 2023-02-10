@@ -1,0 +1,21 @@
+import { createActionType } from 'utils/reduxHelper';
+
+export const CONTEXT = 'ISALON/ORDER_DETAIL';
+
+export const GET_ORDER_DETAIL = `${CONTEXT}/GET_ORDER_DETAIL`;
+export const CANCEL_ORDER = `${CONTEXT}/CANCEL_ORDER`;
+export const CLEAR_ORDER_DETAIL = `${CONTEXT}/CLEAR_ORDER_DETAIL`;
+
+export const [
+  GET_ORDER_DETAIL_REQUEST,
+  GET_ORDER_DETAIL_SUCCESS,
+  GET_ORDER_DETAIL_FAIL,
+] = createActionType(GET_ORDER_DETAIL);
+
+export const [
+  CANCEL_ORDER_REQUEST,
+  CANCEL_ORDER_SUCCESS,
+  CANCEL_ORDER_FAIL,
+] = createActionType(CANCEL_ORDER);
+
+export const LOADING_ACTIONS = [GET_ORDER_DETAIL, CANCEL_ORDER];

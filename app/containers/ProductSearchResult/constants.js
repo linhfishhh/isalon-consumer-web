@@ -1,0 +1,24 @@
+/*
+ *
+ * ProductSearchResult constants
+ *
+ */
+
+import { createActionType } from 'utils/reduxHelper';
+
+export const CONTEXT = 'ISALON/PRODUCT_SEARCH_RESULT';
+export const GET_FILTER_OPTIONS = `${CONTEXT}/GET_FILTER_OPTIONS`;
+export const FETCH_SEARCH_RESULT = `${CONTEXT}/FETCH_SEARCH_RESULT`;
+export const CLEAR_SEARCH_RESULT = `${CONTEXT}/CLEAR_SEARCH_RESULT`;
+
+export const [
+  GET_FILTER_OPTIONS_REQUEST,
+  GET_FILTER_OPTIONS_SUCCESS,
+  GET_FILTER_OPTIONS_FAIL,
+] = createActionType(GET_FILTER_OPTIONS);
+
+export const [
+  FETCH_SEARCH_RESULT_REQUEST,
+  FETCH_SEARCH_RESULT_SUCCESS,
+  FETCH_SEARCH_RESULT_FAIL,
+] = createActionType(FETCH_SEARCH_RESULT);

@@ -1,0 +1,59 @@
+.grecaptcha-badge {
+  display: none !important;
+}
+
+.fancybox-inner {
+  margin-top: env(safe-area-inset-top);
+}
+
+.slick-slide div {
+  outline: none;
+}
+
+.custom-dots {
+  bottom: 8px !important;
+}
+.custom-dots > li {
+  width: auto !important;
+  height: auto !important;
+}
+.custom-dots button {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 4px;
+  height: 8px !important;
+  padding: 0 !important;
+}
+.custom-dots .slick-active button {
+  background-color: #fff !important;
+}
+.custom-dots button::before {
+  content: '' !important;
+}
+
+.content ul li {
+  list-style: none !important;
+  position: relative;
+}
+.content li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+  left: -15px;
+  top: 7px;
+  background: #ff5c39;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-dots button {
+    width: 8px !important;
+  }
+}
+
+.infinite-scroll-component__outerdiv {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

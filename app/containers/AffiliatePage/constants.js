@@ -1,0 +1,26 @@
+/*
+ *
+ * AffiliatePage constants
+ *
+ */
+
+import { createActionType } from 'utils/reduxHelper';
+export const CONTEXT = 'ISALON/AFFILIATE';
+
+export const SHOW_DIALOG = `${CONTEXT}/SHOW_DIALOG`;
+export const AFFILIATE_SUCCESS = `${CONTEXT}/AFFILIATE_SUCCESS`;
+export const GET_AFFILIATE_INFO = `${CONTEXT}/GET_AFFILIATE_INFO`;
+export const GET_AFFILIATE_SETTING = `${CONTEXT}/GET_AFFILIATE_SETTING`;
+export const CLEAN_DATA = `${CONTEXT}/CLEAN_DATA`;
+
+export const [
+  GET_AFFILIATE_INFO_REQUEST,
+  GET_AFFILIATE_INFO_SUCCESS,
+  GET_AFFILIATE_INFO_FAIL,
+] = createActionType(GET_AFFILIATE_INFO);
+
+export const [
+  GET_AFFILIATE_SETTING_REQUEST,
+  GET_AFFILIATE_SETTING_SUCCESS,
+  GET_AFFILIATE_SETTING_FAIL,
+] = createActionType(GET_AFFILIATE_SETTING);

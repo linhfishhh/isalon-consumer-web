@@ -1,0 +1,26 @@
+/*
+ *
+ * History constants
+ *
+ */
+
+import { createActionType } from 'utils/reduxHelper';
+
+export const CONTEXT = 'ISALON/HISTORY';
+
+export const GET_BOOKING_WAITING = `${CONTEXT}/GET_BOOKING_WAITING`;
+export const GET_SHOPPING_WAITING = `${CONTEXT}/GET_SHOPPING_WAITING`;
+export const CLEAN_DATA = `${CONTEXT}/CLEAN_DATA`;
+export const CHANGE_TYPE_ACTIVE = `${CONTEXT}/CHANGE_TYPE_ACTIVE`;
+
+export const [
+  GET_BOOKING_WAITING_REQUEST,
+  GET_BOOKING_WAITING_SUCCESS,
+  GET_BOOKING_WAITING_FAIL,
+] = createActionType(GET_BOOKING_WAITING);
+
+export const [
+  GET_SHOPPING_WAITING_REQUEST,
+  GET_SHOPPING_WAITING_SUCCESS,
+  GET_SHOPPING_WAITING_FAIL,
+] = createActionType(GET_SHOPPING_WAITING);

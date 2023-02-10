@@ -1,0 +1,49 @@
+/*
+ *
+ * BookingPage constants
+ *
+ */
+
+import { createActionType } from 'utils/reduxHelper';
+
+export const CONTEXT = 'ISALON/BOOKING';
+
+export const GET_BOOKING_ITEMS = `${CONTEXT}/GET_BOOKING_ITEMS`;
+export const GET_SALON_INFO = `${CONTEXT}/GET_SALON_INFO`;
+export const GET_SALON_OPEN_TIME = `${CONTEXT}/GET_SALON_OPEN_TIME`;
+export const CHANGE_QUANTITY = `${CONTEXT}/CHANGE_QUANTITY`;
+export const REMOVE_SERVICE = `${CONTEXT}/REMOVE_SERVICE`;
+export const ADD_BOOKING = `${CONTEXT}/ADD_BOOKING`;
+export const PRE_PAY_BOOKING_COIN = `${CONTEXT}/PREPAY_BOOKING_COIN`;
+
+export const [
+  GET_BOOKING_ITEMS_REQUEST,
+  GET_BOOKING_ITEMS_SUCCESS,
+  GET_BOOKING_ITEMS_FAIL,
+] = createActionType(GET_BOOKING_ITEMS);
+
+export const [
+  GET_SALON_INFO_REQUEST,
+  GET_SALON_INFO_SUCCESS,
+  GET_SALON_INFO_FAIL,
+] = createActionType(GET_SALON_INFO);
+
+export const [
+  GET_SALON_OPEN_TIME_REQUEST,
+  GET_SALON_OPEN_TIME_SUCCESS,
+  GET_SALON_OPEN_TIME_FAIL,
+] = createActionType(GET_SALON_OPEN_TIME);
+
+export const [
+  PRE_PAY_BOOKING_COIN_REQUEST,
+  PRE_PAY_BOOKING_COIN_SUCCESS,
+  PRE_PAY_BOOKING_COIN_FAIL,
+] = createActionType(PRE_PAY_BOOKING_COIN);
+
+export const [
+  ADD_BOOKING_REQUEST,
+  ADD_BOOKING_SUCCESS,
+  ADD_BOOKING_FAIL,
+] = createActionType(ADD_BOOKING);
+
+export const LOADING_ACTIONS = [ADD_BOOKING];

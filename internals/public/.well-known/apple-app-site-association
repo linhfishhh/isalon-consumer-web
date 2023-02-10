@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "VVX8XLW53C.vn.isalon.booking",
+        "paths": [
+          "NOT /lam-dep/dat-cho/*",
+          "NOT /san-pham/xac-nhan-don-hang/*",
+          "NOT /dang-ky-salon/*",
+          "NOT /tai-khoan/*",
+          "*", 
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "VVX8XLW53C.vn.isalon.booking"
+    ]
+  }
+}

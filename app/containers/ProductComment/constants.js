@@ -1,0 +1,52 @@
+/*
+ *
+ * ProductComment constants
+ *
+ */
+
+import { createActionType } from 'utils/reduxHelper';
+
+export const CONTEXT = 'ISALON/PRODUCT_COMMENT';
+
+export const GET_PRODUCT_REVIEWS = `${CONTEXT}/GET_PRODUCT_REVIEWS`;
+export const LIKE_REVIEW = `${CONTEXT}/LIKE_REVIEW`;
+export const UNLIKE_REVIEW = `${CONTEXT}/UNLIKE_REVIEW`;
+export const LIKE_REVIEW_REPLY = `${CONTEXT}/LIKE_REVIEW_REPLY`;
+export const UNLIKE_REVIEW_REPLY = `${CONTEXT}/UNLIKE_REVIEW_REPLY`;
+export const SEND_COMMENT = `${CONTEXT}/SEND_COMMENT`;
+
+export const [
+  GET_PRODUCT_REVIEWS_REQUEST,
+  GET_PRODUCT_REVIEWS_SUCCESS,
+  GET_PRODUCT_REVIEWS_FAIL,
+] = createActionType(GET_PRODUCT_REVIEWS);
+
+export const [
+  LIKE_REVIEW_REQUEST,
+  LIKE_REVIEW_SUCCESS,
+  LIKE_REVIEW_FAIL,
+] = createActionType(LIKE_REVIEW);
+
+export const [
+  UNLIKE_REVIEW_REQUEST,
+  UNLIKE_REVIEW_SUCCESS,
+  UNLIKE_REVIEW_FAIL,
+] = createActionType(UNLIKE_REVIEW);
+
+export const [
+  LIKE_REVIEW_REPLY_REQUEST,
+  LIKE_REVIEW_REPLY_SUCCESS,
+  LIKE_REVIEW_REPLY_FAIL,
+] = createActionType(LIKE_REVIEW_REPLY);
+
+export const [
+  UNLIKE_REVIEW_REPLY_REQUEST,
+  UNLIKE_REVIEW_REPLY_SUCCESS,
+  UNLIKE_REVIEW_REPLY_FAIL,
+] = createActionType(UNLIKE_REVIEW_REPLY);
+
+export const [
+  SEND_COMMENT_REQUEST,
+  SEND_COMMENT_SUCCESS,
+  SEND_COMMENT_FAIL,
+] = createActionType(SEND_COMMENT);
